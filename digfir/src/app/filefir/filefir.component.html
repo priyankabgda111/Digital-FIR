@@ -1,0 +1,28 @@
+
+<div class="reg">
+    <img src="./assets/police.png" id=pol>
+</div>
+
+
+<form #r="ngForm">
+    <div class="form-group f1">
+        <label  for="l1"><b>Aadhar Number</b></label>
+        <input type="text" class="form-control" id="l1" [(ngModel)]="aadharnum" name="aadharnum" placeholder="Enter aadhar">
+            <small class="form-text">We'll never share your aadhar details with anyone else.</small>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="sendotp(r.value)">Send OTP</button>
+<br><br>
+    <div class="form-group" *ngIf='isOtpSent()'>
+        <label for="l2"><b>OTP</b></label>
+        <input type="password" class="form-control" id="l2" [(ngModel)]="otp" name="otp" placeholder="Enter OTP">
+    </div>
+    <button type="submit" class="btn btn-primary" *ngIf='isOtpSent()' (click)="checkotp(r.value)">Submit</button>
+</form>
+<!-- <div class="reg">
+<audio controls autoplay>
+    <source src="welcome.mp3" type="audio/mpeg"><br>
+</audio><br>
+<audio controls autoplay>
+    <source src="otp.mp3" type="audio/mpeg"><br>
+</audio>
+</div> -->

@@ -1,0 +1,27 @@
+
+
+<form #r="ngForm">
+    <div class="form-group f1">
+       <label for="">Enter Aadhar number</label>
+       <input type="text" class="form-control" id="l2" [(ngModel)]="aadharnum" name="aadharnum" placeholder="Aadhar">
+  </div>
+    <button type="submit" class="btn btn-primary" (click)="findfir(r.value)">submit</button>
+
+</form>
+<div *ngFor="let f of fir">
+    
+        <div class="card">
+            <div class="card-body">
+              <b>Date</b>&nbsp;<i>{{f.date}}</i><br>
+              <b>Time</b>&nbsp;<i>{{f.time}}</i><br>
+              <b>type of crime</b>&nbsp;<i>{{f.typeofcrime}}</i><br>
+              <b>event</b>&nbsp;<i>{{f.event}}</i><br>
+              <b>suspect</b>&nbsp;<i>{{f.suspectdetails}}</i><br>
+              <b>status</b>&nbsp;<i>{{f.status}}</i><br>
+
+
+                </div>                   
+             </div>
+       
+
+</div>

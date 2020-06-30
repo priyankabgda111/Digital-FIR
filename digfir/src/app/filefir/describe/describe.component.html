@@ -1,0 +1,44 @@
+
+    <h2 align="center">Describe the event</h2>
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6" style="text-align: center">
+          <form  #r="ngForm">
+              <div class="form-group">
+            <textarea id=t1 rows=10 cols=100 [(ngModel)]="event" name="event"></textarea>
+            <button type="submit" class="btn btn-primary" (click)="add(r.value)">Continue..</button>
+              </div>
+          </form>
+          <!-- <script>
+             const SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
+              let finalTranscript = '';
+              let recognition = new SpeechRecognition();
+            //var t1=document.getElementById('t1');
+            recognition.interimResults = true;
+            recognition.maxAlternatives = 10;
+            recognition.continuous = true;
+            
+            recognition.start();
+            recognition.onresult = (event) => {
+              let interimTranscript = '';
+              t1.textContent='';
+              for (let i = event.resultIndex, len = event.results.length; i < len; i++) 
+              {
+                let transcript = event.results[i][0].transcript;
+                if (event.results[i].isFinal) 
+                {
+                  t1.textContent+=transcript;
+                  finalTranscript += transcript;
+                } 
+                else
+                {
+                  t1.textContent+=transcript;
+                  interimTranscript += transcript;
+                }
+                //document.write(event.results.length);
+              }
+                document.querySelector('t1').innerHTML = finalTranscript + '<i style="color:#ddd;">' + interimTranscript + '</>';
+            }
+          </script> -->
+        </div>
+    </div>

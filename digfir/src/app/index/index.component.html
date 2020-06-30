@@ -1,0 +1,148 @@
+
+        <section id="nav-bar">
+        <nav class="navbar navbar-expand-xl  bg-white">
+            <a class="nav-link" href=""><img src="../assets/logo1.png" class="logo"/>DIGITAL FIR</a>
+           <button type="button" class="navbar-toggler" data-toggler="collapse" data-target="navbarcontent" aria-controls="navbarcontent" aria-expanded="="false aria-label="Toggle-navigation">
+            <i class="fa fa-bars"></i>
+           </button>
+    <div class="collapse navbar-collapse" id="navbarcontent">
+        
+           
+      
+        <ul class="navbar-nav mt-3 ml-auto">
+            
+          <li class="nav-item">
+              <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#steps" class="nav-link">Instructions</a>
+        </li>
+        <li class="nav-item">
+            <a href="#footer" class="nav-link">Contact</a>
+        </li>
+        <!-- </ul> -->
+        <!-- <ul class="nav navbar-nav  mt-3"> -->
+        <li class="nav-item" *ngIf="!us.userLogged" >
+            <a routerLink="user/login" class="nav-link" (click)="file()">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="us.userLogged" >
+            <a routerLink="user/profile" class="nav-link" (click)="file()">My profile</a>
+        </li>
+        <li class="nav-item"*ngIf="us.userLogged" >
+            <a routerLink="user/mycomplaints" class="nav-link" (click)="file()">My Complaints</a>
+        </li>
+        <li class="nav-item" *ngIf="us.userLogged" >
+            <a (click)="onLogout()" class="nav-link">Logout</a>
+        </li>
+        <li class="nav-item " *ngIf="!us.userLogged">
+            <a routerLink="user/register" class="nav-link" (click)="file()">Register</a>
+        </li>
+        </ul>
+    </div>
+        </nav>
+    </section>   
+    <router-outlet></router-outlet>
+           <div *ngIf="us.home" >
+    <section id="banner">
+    <div class="jumbotron">
+        <div class="container">
+            <!--create logo-->
+            <div class="row">
+                <div class="col-md-8 col-lg-8 col-sm-2 col-xs-6"></div>
+            <!--create featured part-->
+            <div class="col-md-4 col-lg-4  col-sm-10 col-xs-6 text-center">
+            <div class="featured">
+                <!--create a row to use the grid system and limit space taken by featured content-->
+                <div class="row">
+                    <!--Use only 9 columns out of 12 for medium and large devices-->
+                    
+                        <p class="l-title">DIGITAL FIR</p>
+                        <p >Easy, fast and secure way of filing an FIR.<br>Now at your fingertips</p>
+                        
+                        <p *ngIf="us.userLogged">
+                            <button class="btn btn-default btn-lg" routerLink="user/otp" (click)="file()">FILE FIR</button><br>
+                            <a class="btn btn-default btn-lg"routerLink="user/viewfir" (click)="file()">VIEW FIR</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        
+        </div>
+    
+    </div>
+</section>
+    <!--create the trial section-->
+    <div class="about" id="about">
+        <div class="container">
+           <h3 class="title">About Us</h3>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-0 col-xs-0">
+                    <img src="../assets/about.png" class="abt-img">
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    
+                    <p class="data">
+                        Digi X provides an online platform for filing an FIR.
+                    </p>
+                </div>
+                </div>
+        </div>
+    </div>
+    <section id="steps">
+        <div class="container text-center">
+            <h1 class="title">How to File FIR?</h1>
+            <div class="row text-center">
+                <div class="col-md-3 step">
+                    <img src="../assets/icon-1.png" class="steps-img">
+                    <h4>Create Account</h4>
+                    <p><a href="register.html">Create</a> account and <a href="login.html">login</a> with your username and password.</p>
+                </div>
+                <div class="col-md-3 step">
+                    <img src="../assets/icon-2.png" class="steps-img">
+                    <h4>Enter OTP</h4>
+                    <p>In <a href="file.html">File</a> FIR page, enter the OTP sent to your mobile number and verify your details</p>
+                </div>
+                <div class="col-md-3 step">
+                    <img src="../assets/icon-3.png" class="steps-img">
+                    <h4>Add incident details</h4>
+                    <p>Enter the date,time, place of the incident and add deatils</p>
+                </div>
+                <div class="col-md-3 step">
+                    <img src="../assets/icon-4.png" class="steps-img">
+                    <h4>Add Signature</h4>
+                    <p>Add your signature and submit FIR</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-box">
+                    <img src="../assets/logo1.png" class="logo"/>
+                    <h5 class="con">Digital FIR</h5>
+                        <p >Easy, fast and secure way of filing an FIR.<br>Now at your fingertips</p>
+                </div>
+                <div class="col-md-4 footer-box">
+                    <p class="con">CONTACT US</p>
+                    <p><i class="fa fa-map-marker" ></i>VNRVJIET,Hyderabad</p>
+                    <p><i class="fa fa-phone" ></i>9000000000</p>
+                    <p><i class="fa fa-envelope" ></i>digitalfir@gmail.com</p>
+
+                </div>
+                <div class="col-md-4">
+                    <div id="social">
+                        <div class="container text-center">
+                            <p>Social Media</p>
+
+<div class="icons">
+                                <a href="https://www.facebook.com/hyderabadpolice"><img src="../assets/fb.png"></a>
+                                <a href="https://www.instagram.com/telanganapolice/"><img src="../assets/ig.png"></a>
+                                <a href="https://twitter.com/hydcitypolice"><img src="../assets/tw.png"></a>
+</div></div></div></div></div>
+        </div></section>
+           </div>    
+  
+
+     

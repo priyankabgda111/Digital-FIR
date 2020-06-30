@@ -1,0 +1,22 @@
+<div class="container">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <h1 align="center">Suspect Details(Optional)</h1><br><br><br>
+                <!-- <audio controls>
+                    <source src="suspect.mp3" type="audio/mpeg">
+                </audio> -->
+                <form #f="ngForm" >
+                    <div class="form-group text-center">
+                    <label for="w1">Describe the details of suspect:</label><br><br>
+                    <textarea   [(ngModel)]="suspectdetails" name="suspectdetails" id="w1" cols="60" rows="10"></textarea><br> 
+                    <small>The details of suspect may include his/her name,appearance,weapons used etc.</small>
+
+ <br><br><button type="submit" (click)="submit(f.value)"class="btn btn-info">Submit</button>
+                </div>
+                </form>
+
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+</div>
